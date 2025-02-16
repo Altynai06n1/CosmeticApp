@@ -1,8 +1,5 @@
 package com.example.cosmetics;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Lipstick {
     private String color;
 

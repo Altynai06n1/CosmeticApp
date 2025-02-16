@@ -13,9 +13,9 @@ public class CosmeticApp {
         Skincare moisturizer = context.getBean("moisturizer", Skincare.class);
         Skincare serum = context.getBean("serum", Skincare.class);
 
-        System.out.println("Red Lipstick Color: " + redLipstick.getColor());
-        System.out.println("Pink Lipstick Color: " + pinkLipstick.getColor());
-        System.out.println("Skincare Product (Moisturizer): " + moisturizer.getProductType());
-        System.out.println("Skincare Product (Serum): " + serum.getProductType());
+        System.out.println("First Lipstick Color: " + redLipstick.getColor());
+        System.out.println("Second Lipstick Color: " + pinkLipstick.getColor());
+        System.out.println("First Skincare Product: " + moisturizer.getProductType());
+        System.out.println("Second Product: " + serum.getProductType());
     }
 }

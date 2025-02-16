@@ -1,8 +1,5 @@
 package com.example.cosmetics;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Skincare {
     private String productType;
 
