@@ -5,12 +5,17 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class CosmeticApp {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.example.cosmetics");
+        ApplicationContext context = new AnnotationConfigApplicationContext(CosmeticConfig.class);
 
-        Lipstick lipstick = context.getBean(Lipstick.class);
-        Skincare skincare = context.getBean(Skincare.class);
+        Lipstick redLipstick = context.getBean("redLipstick", Lipstick.class);
+        Lipstick pinkLipstick = context.getBean("pinkLipstick", Lipstick.class);
 
-        System.out.println("Lipstick Color: " + lipstick.getColor());
-        System.out.println("Skincare Product: " + skincare.getProductType());
+        Skincare moisturizer = context.getBean("moisturizer", Skincare.class);
+        Skincare serum = context.getBean("serum", Skincare.class);
+
+        System.out.println("Red Lipstick Color: " + redLipstick.getColor());
+        System.out.println("Pink Lipstick Color: " + pinkLipstick.getColor());
+        System.out.println("Skincare Product (Moisturizer): " + moisturizer.getProductType());
+        System.out.println("Skincare Product (Serum): " + serum.getProductType());
     }
 }

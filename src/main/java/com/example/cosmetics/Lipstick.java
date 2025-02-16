@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Lipstick {
-    private String color = "Red";
+    private String color;
 
     public String getColor() {
         return color;

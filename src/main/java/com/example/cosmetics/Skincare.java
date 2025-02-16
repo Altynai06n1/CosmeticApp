@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Skincare {
-    private String productType = "Moisturizer";
+    private String productType;
 
     public String getProductType() {
         return productType;
